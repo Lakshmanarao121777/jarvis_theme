@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  letter-spacing: 1.2;
+  /* text-shadow:   1px 1px 2px  #01B9B5, 0 0 1em; */
+  font-size: 16px;
+  color: #0082D3
+}

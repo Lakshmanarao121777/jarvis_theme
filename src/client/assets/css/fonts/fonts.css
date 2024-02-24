@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+.marvel {
+  font-family: "Marvel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.marvel-italic {
+  font-family: "Marvel", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.marvel-bold {
+  font-family: "Marvel", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.marvel-bold-italic {
+  font-family: "Marvel", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.kode-mono {
+  font-family: "Kode Mono", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.kode-mono-italic {
+  font-family: "Kode Mono", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.kode-mono-bold {
+  font-family: "Kode Mono", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.kode-mono-bold-italic {
+  font-family: "Kode Mono", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}

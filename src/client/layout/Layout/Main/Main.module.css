@@ -1,0 +1,13 @@
+.container{
+    padding:2px;
+    text-transform: capitalize;
+}
+.mainArea{
+    background-color: #01193288;
+    padding:4px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
