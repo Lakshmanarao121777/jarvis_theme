@@ -1,3 +1,3 @@
 export { Sidebar } from "./Sidebar";
 
-export type { SidebarProps } from "./types";
+export type { ISidebarProps } from "./types";

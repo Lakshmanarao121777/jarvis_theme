@@ -1,3 +1,3 @@
 export { Header } from "./Header";
 
-export type { HeaderProps } from "./types";
+export type { IHeaderProps } from "./types";

@@ -1,5 +1,13 @@
-export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
+import React, { Dispatch, SetStateAction, createContext } from "react";
+
+export interface IHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;
-  open?: boolean;
+  navCollapse?: boolean;
+  setNavCollapse: Dispatch<SetStateAction<boolean>>;
 }
+
+export const MenuContext = createContext<IHeaderProps>({
+  navCollapse: false,
+  setNavCollapse: () => { },
+});

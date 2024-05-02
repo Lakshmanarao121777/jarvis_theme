@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { forwardRef, ForwardedRef } from "react";
+import { forwardRef, ForwardedRef, useState } from "react";
 import classNames from "classnames";
 import { Sidebar } from "./Sidebar";
 import { Main } from "./Main";
@@ -10,7 +10,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100%;
-  background-color: ${(props) => `${props.theme.colors.background}`};
+  // background-color: ${(props) => `${props.theme.colors.background}`};
   color: ${(props) => `${props.theme.colors.textPrimary}`};
   font-family: ${(props) => props.theme.fonts[0]};
   box-sizing: border-box;
@@ -21,6 +21,7 @@ export const Layout = forwardRef(
     { className, children, ...props }: LayoutProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
+    const [navCollapse, setNavCollapse] = useState<boolean>(false);
     return (
       <Container
         ref={ref}
@@ -42,11 +43,17 @@ export const Layout = forwardRef(
           </div>
         </div> */}
         {/* <div className="w-screen h-12"> */}
-        <Header />
+        <Header
+          navCollapse={navCollapse}
+          setNavCollapse={() => setNavCollapse(!navCollapse)}
+        />
         {/* </div> */}
         <div className={classNames("flex", "w-screen", "h-[calc(100vh-3rem)]")}>
           <div className={classNames("flex", "w-60", "h-full")}>
-            <Sidebar />
+            <Sidebar
+              navCollapse={navCollapse}
+              setNavCollapse={() => setNavCollapse(!navCollapse)}
+            />
           </div>
           <div className="flex justify-between flex-col w-full">
             <Main />
@@ -57,6 +64,3 @@ export const Layout = forwardRef(
     );
   },
 );
-Layout.defaultProps = {
-  className: "",
-};

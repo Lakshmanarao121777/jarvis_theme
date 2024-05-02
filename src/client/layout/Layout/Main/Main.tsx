@@ -9,7 +9,6 @@ export const Main = forwardRef(
     { className, children, ...rest }: MainProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
-    console.log(rest);
     return (
       <div ref={ref} className={classNames(className, "p-4", style.container)}>
         <div className={style.mainArea}>

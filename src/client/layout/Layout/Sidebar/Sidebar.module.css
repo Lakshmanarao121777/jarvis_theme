@@ -1,8 +1,38 @@
-.divider{
+.divider {
     margin: 2px;
-    border-radius:8px;
-    -webkit-border-radius:8px;
-    -moz-border-radius:8px;
-    -ms-border-radius:8px;
-    -o-border-radius:8px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.navItems {
+    padding: 2px
+}
+
+.navItem {
+    padding: 2px
+}
+
+.navSeparator {
+    /* border-bottom: 0.5px solid red; */
+    width: 90%;
+    align-items: center;
+    display: flex;
+    margin: 5%;
+}
+
+.navItems {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    /* border: 1px solid red; */
+}
+
+.navItem {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    /* border: 1px solid red; */
 }

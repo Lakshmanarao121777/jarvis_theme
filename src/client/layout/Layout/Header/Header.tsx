@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { forwardRef, ForwardedRef } from "react";
 import classNames from "classnames";
-import { HeaderProps } from ".";
+import { IHeaderProps } from ".";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBell,
@@ -21,7 +21,13 @@ const Search = styled.input`
 
 export const Header = forwardRef(
   (
-    { className, children, ...rest }: HeaderProps,
+    {
+      className,
+      children,
+      setNavCollapse,
+      navCollapse = false,
+      ...rest
+    }: IHeaderProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     // console.log(rest);
@@ -43,17 +49,13 @@ export const Header = forwardRef(
               style={{ width: "100%" }}
             />
           </div>
-          <div className="py-2">
+          <div className="py-2" onClick={() => setNavCollapse(navCollapse)}>
             <FontAwesomeIcon icon={faBars} />
           </div>
           <div className="p-2">
             <div className={styles.searchContainer}>
               <Search type="text" placeholder="Search.." name="search" />
-              <FontAwesomeIcon
-                icon={faSearch}
-                onClick={() => alert()}
-                style={{ cursor: "pointer" }}
-              />
+              <FontAwesomeIcon icon={faSearch} style={{ cursor: "pointer" }} />
             </div>
           </div>
         </div>
